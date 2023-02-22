@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Jan 26 11:26:11 2023
 
@@ -11,17 +10,17 @@ import matplotlib.pyplot as plt
 
 os.chdir('C:/Users/Groth/Desktop/scopes 2/dnv')
 
-E=207e9     
-ni=0.3       
-fy_bs = 450e6   
+E=207e9 # Youngs modulus Backing steel   
+ni=0.3       # Poison
+fy_bs = 450e6   # yeld stress
 fy_c  = 450e6  
-D=0.3048
-#Pc_dnv=np.zeros((4,5))
+D=0.3048 # out diamenter 
 
-dt=np.array([7.5,15,20,30])
+
+dt=np.array([7.5,15,20,30]) # D/t ratio
 
 f0=np.array([0.005,0.01,0.02,0.03,0.04])    
-
+ 
 Pc_dnv=np.zeros((len(dt),len(f0)))
 t_c=np.array([3e-3])
 
@@ -50,13 +49,6 @@ ax2.plot(dt, Pc_dnv[:,i],color='darkblue', linestyle='dotted', linewidth=3,marke
 ax2.set_ylabel('colpase capacity')
 ax2.set_xlabel('d/t ratio')
 
-def Pc_dnv():
-    fig, ax1 = plt.subplots(figsize=(7,3))
-    ax1.plot(dt, Pc_dnv,color='darkblue', linestyle='dotted', linewidth=1,marker='s', markersize=5, label='Friction Coefficient')
-    ax1.set_ylabel('colpase capacity')
-    ax1.set_xlabel('d/t ratio')
-    
-    
 
 
 
