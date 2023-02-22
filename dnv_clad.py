@@ -19,7 +19,7 @@ D=0.3048 # out diamenter
 
 dt=np.array([7.5,15,20,30]) # D/t ratio
 
-f0=np.array([0.005,0.01,0.02,0.03,0.04])    
+f0=np.array([0.005,0.01,0.02,0.03,0.04]) #ovalization
  
 Pc_dnv=np.zeros((len(dt),len(f0)))
 t_c=np.array([3e-3])
